@@ -1,0 +1,15 @@
+Interesting observations:
+ 
+CarOwner - CarOwner Entity triggers the creation of two tables
+create table CarOwner (id integer not null, name varchar(255), primary key (id))
+create table CAR_CAROWNER (CAR_OWNER_ID integer not null, CAR_ID integer not null)
+ 
+ 
+Person
+ 
+Notice the two Address embedded entities in person, notice the columns aliases
+PERSON_PHONES is created from Person (without specific entity definition). One-Many relation. 
+PERSON_INSURANCES is created from Person. Notice that  @ElementCollection is used , since insurance is embeddable in Insurance. 
+ 
+Vehicle
+Notice the inheritance of FourWheeler and TwoWheeler  classes. A discriminator is defined (DTYPE)  to distinguish between the two objects 
