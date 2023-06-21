@@ -80,6 +80,9 @@ public class Person
       this.lastName = lastName;
       this.email = email;
       this.joinedDate = joinedDate;
+      System.out.println(this.firstName);
+      System.out.println(this.lastName);
+      System.out.println(this.email);
 
    }
 
